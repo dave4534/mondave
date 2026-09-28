@@ -3,3 +3,13 @@ app/node_modules
 app/dist
 app/storybook-static
 app/*storybook.log
+
+# YouTube Transcripts & research notes
+Youtube Transcripts/
+Youtube Transcripts.md
+
+# Root planning & working documents
+/Glossary.md
+/Open Questions.md
+/Process.md
+/Tasks.md
