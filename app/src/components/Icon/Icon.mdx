@@ -1,0 +1,63 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as IconStories from './Icon.stories';
+
+<Meta of={IconStories} />
+
+# Icon
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+- [States](#states)
+- [Icons list](#icons-list)
+
+## Overview
+
+Icon component unifies Lucide icons, direct Lucide usage, and custom SVG icons in Mondave.
+
+<Canvas of={IconStories.Overview} />
+
+### Import
+
+```tsx
+import { Icon } from '@mondave/core';
+```
+
+## Props
+
+<ArgTypes />
+
+## Usage
+
+- Always wrap icons with `Icon` when you need Mondave semantic colors.
+- Try to always use icons alongside text or provide a tooltip / `label` to accommodate the icon.
+- Import icons by name from `lucide-react` so unused icons are tree-shaken.
+
+## Variants
+
+### Lucide
+
+<Canvas of={IconStories.Lucide} />
+
+### Custom SVG
+
+<Canvas of={IconStories.CustomSvg} />
+
+## States
+
+### Color
+
+As a default the icon will inherit the color of its parent container.
+
+<Canvas of={IconStories.Color} />
+
+## Icons list
+
+Icons are exported by name from `lucide-react`:
+
+```tsx
+import { Settings } from 'lucide-react';
+```
+
+<Canvas of={IconStories.IconsListStory} />

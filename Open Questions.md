@@ -1,0 +1,8 @@
+- Which Skills for both claude and cursor, respectively?
+- Which Figma plugins are relevant and why?
+	- Figma Lint
+- Which skills are used
+	- To establish new components?
+	- To maintain the design system?
+	- To ensure alignment between figma and code?
+- Do you use primitives + semantic tokens or just semantic tokens?

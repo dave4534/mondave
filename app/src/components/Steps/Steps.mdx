@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as StepsStories from './Steps.stories';
+
+<Meta of={StepsStories} />
+
+# Steps
+
+Steps navigate sequential content with previous/next controls and optional gallery dots.
+
+## When to use
+
+- Carousels, guided tours, or paginated subflows
+- Step-by-step media or instructions
+
+## When not to use
+
+- Hierarchy location — use **Breadcrumbs**
+- Form wizards with labeled steps — use **MultiStepIndicator**
+
+## Accessibility
+
+- Announce current step index
+- Previous/next buttons need clear labels
+
+## Examples
+
+<Canvas of={StepsStories.Gallery} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

@@ -1,0 +1,37 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as RadioButtonStories from './RadioButton.stories';
+
+<Meta of={RadioButtonStories} />
+
+# RadioButton
+
+Radio buttons let users choose exactly one option from a set.
+
+## When to use
+
+- 2–7 mutually exclusive choices
+- Settings where all options should be visible
+
+## When not to use
+
+- Multiple selections — use **Checkbox**
+- On/off settings — use **Toggle**
+- Many options — use **Dropdown**
+
+## Accessibility
+
+- Group related radios with `fieldset` / `legend` or `role="radiogroup"`
+- Error state should be linked with `aria-describedby`
+
+## Examples
+
+<Canvas of={RadioButtonStories.Vertical} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

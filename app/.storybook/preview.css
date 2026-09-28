@@ -1,0 +1,9 @@
+/* Canvas background — must target Storybook's layout shell, not the story decorator.
+   With layout: 'centered', #storybook-root shrink-wraps to content width. */
+.sb-show-main {
+  background-color: var(--ui-background-color);
+}
+
+.docs-story {
+  background-color: var(--ui-background-color);
+}

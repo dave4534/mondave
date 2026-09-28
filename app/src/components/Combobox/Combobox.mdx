@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ComboboxStories from './Combobox.stories';
+
+<Meta of={ComboboxStories} />
+
+# Combobox
+
+Comboboxes combine search with a selectable list and optional footer action.
+
+## When to use
+
+- Large option lists where users need to type to filter
+- “Add new” flows at the bottom of a list
+
+## When not to use
+
+- Small fixed lists — use **Dropdown**
+- Free text without suggestions — use **TextField**
+
+## Accessibility
+
+- Input must have an accessible name
+- Announce list visibility and selection changes
+
+## Examples
+
+<Canvas of={ComboboxStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

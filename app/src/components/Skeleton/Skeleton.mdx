@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as SkeletonStories from './Skeleton.stories';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+Skeletons provide placeholder previews while content loads.
+
+## When to use
+
+- Initial page load where layout is known
+- Reducing layout shift before data arrives
+
+## When not to use
+
+- Short button actions — use **Button** loading state
+- Indeterminate spinner-only waits — use **Loader**
+
+## Shapes
+
+Rectangle, circle, and text line placeholders.
+
+## Accessibility
+
+- Mark skeleton containers as aria-busy while loading
+- Replace with real content when loaded
+
+## Examples
+
+<Canvas of={SkeletonStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

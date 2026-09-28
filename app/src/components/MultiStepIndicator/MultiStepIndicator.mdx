@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as MultiStepIndicatorStories from './MultiStepIndicator.stories';
+
+<Meta of={MultiStepIndicatorStories} />
+
+# MultiStepIndicator
+
+Multi-step indicators visualize progress through a wizard or onboarding flow.
+
+## When to use
+
+- Checkout, setup wizards, or guided onboarding
+- When users need to see steps ahead and behind
+
+## When not to use
+
+- Single-step forms
+- Non-linear exploration — use **Tabs**
+
+## Layouts
+
+Horizontal and vertical orientations with compact mode.
+
+## Accessibility
+
+- Announce current step and total steps
+- Do not rely on color alone for completed vs upcoming
+
+## Examples
+
+<Canvas of={MultiStepIndicatorStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

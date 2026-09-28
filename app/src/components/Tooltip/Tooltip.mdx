@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as TooltipStories from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+Tooltips reveal short helper text on hover or focus.
+
+## When to use
+
+- Icon-only control hints
+- Brief definitions of unfamiliar terms
+
+## When not to use
+
+- Essential instructions — put them in visible copy
+- Long content — use **Tipseen** or inline help
+
+## Accessibility
+
+- Trigger must be keyboard focusable
+- Tooltip content should be available to screen readers on focus
+
+## Examples
+
+<Canvas of={TooltipStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

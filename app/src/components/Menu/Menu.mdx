@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu
+
+Menus present a list of actions or destinations in a compact overlay.
+
+## When to use
+
+- Overflow actions (“More” menus)
+- Contextual action lists
+
+## When not to use
+
+- Form option picking — use **Dropdown** or **Combobox**
+- Persistent navigation — use app nav patterns
+
+## Accessibility
+
+- Menu items must be keyboard navigable
+- Trigger should declare `aria-expanded`
+
+## Examples
+
+<Canvas of={MenuStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

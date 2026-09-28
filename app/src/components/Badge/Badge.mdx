@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as BadgeStories from './Badge.stories';
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+Badges draw attention to new or updated content on a child element.
+
+## When to use
+
+- Unread counts on icons or avatars
+- “New” indicators on navigation items
+
+## When not to use
+
+- Standalone status messaging — use **Label** or **Counter**
+- Large numeric dashboards — use **Counter**
+
+## Accessibility
+
+- Pair with visible context (e.g. “Notifications” label)
+- Hide decorative badges from assistive tech when redundant
+
+## Examples
+
+<Canvas of={BadgeStories.OnButton} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

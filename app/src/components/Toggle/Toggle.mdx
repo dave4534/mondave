@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ToggleStories from './Toggle.stories';
+
+<Meta of={ToggleStories} />
+
+# Toggle
+
+Toggles let users switch a single setting on or off.
+
+## When to use
+
+- Immediate binary settings (notifications, visibility)
+- States that take effect without a separate Save
+
+## When not to use
+
+- Multiple options — use **RadioButton** or **Dropdown**
+- Actions that submit a form — use **Button**
+
+## Accessibility
+
+- Use `role="switch"` with `aria-checked`
+- Visible on/off labels help all users
+
+## Examples
+
+<Canvas of={ToggleStories.Interactive} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

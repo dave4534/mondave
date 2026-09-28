@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Deprecation" />
+
+# Deprecation
+
+Track deprecated patterns and simplified implementations here. Do not use deprecated APIs in new work.
+
+## Template
+
+When deprecating a prop, variant, or component:
+
+1. Add a row to the table below with **Replacement** and **Remove by** date.
+2. Add a console warning in the component (dev only) if feasible.
+3. Update the component MDX parity table.
+
+## Known simplifications
+
+| Component | Deferred / simplified | Replacement / notes |
+|-----------|----------------------|---------------------|
+| Button | Full 1,164-variant matrix | Core Kind × Size × Icon axes only |
+| Split Button | Full variant matrix | Primary split pattern |
+| Table subcomponents | Not built | Use List or custom table |
+| Internal `.` / `_` primitives | Skipped | Public components only |
+
+## Figma parity
+
+Each pilot component MDX includes a **Figma parity** table marking axes as **Implemented**, **Deferred**, or **N/A**. Expand coverage incrementally — do not block shipping on full variant parity.

@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as IconButtonStories from './IconButton.stories';
+
+<Meta of={IconButtonStories} />
+
+# IconButton
+
+Icon buttons are square, icon-only controls for compact actions.
+
+## When to use
+
+- Toolbar actions (close, edit, more)
+- Repeated actions where space is limited
+
+## When not to use
+
+- Actions that need a text label for clarity — use **Button**
+- Navigation to another page — use **Link**
+
+## Accessibility
+
+- **Required:** `aria-label` describing the action
+- Visible `:focus-visible` ring on keyboard focus
+
+## Examples
+
+<Canvas of={IconButtonStories.AllKinds} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

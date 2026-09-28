@@ -1,0 +1,45 @@
+name: Storybook CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+defaults:
+  run:
+    working-directory: app
+
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build library
+        run: npm run build
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: Run Storybook tests
+        run: npm run test-storybook
+
+      # Optional — uncomment after creating a Chromatic project and adding CHROMATIC_PROJECT_TOKEN
+      # - name: Publish to Chromatic
+      #   uses: chromaui/action@latest
+      #   with:
+      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      #     workingDir: app

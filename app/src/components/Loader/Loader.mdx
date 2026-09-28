@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as LoaderStories from './Loader.stories';
+
+<Meta of={LoaderStories} />
+
+# Loader
+
+Loaders indicate that content is loading.
+
+## When to use
+
+- Page or section fetches with unknown duration
+- Inline waits where a button spinner is not enough
+
+## When not to use
+
+- Button submit feedback — use **Button** loading state
+- Layout placeholders — use **Skeleton**
+
+## Accessibility
+
+- Use role="status" with an accessible label
+- Remove or hide the loader when loading completes
+
+## Examples
+
+<Canvas of={LoaderStories.AllSizes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

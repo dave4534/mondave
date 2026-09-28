@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Introduction" />
+
+# Mondave Design System
+
+Mondave is a React component library and design-token set for building consistent product UI. This Storybook is the live catalog: browse foundations, try components, and copy usage into your app.
+
+**`@mondave/core`** — Mondave’s core component library in React.
+
+## Start here
+
+| I want to… | Go to… |
+|------------|--------|
+| Understand color, spacing, and tokens | **Design System → Color / Spacing / Tokens** |
+| See a live component | **Components** in the sidebar |
+| Learn how icons work | **Components → Icon** |
+| Switch light / dark theme | **Color** control in the Storybook toolbar |
+| Use Mondave in code | Install / link `@mondave/core` (below) |
+
+## Using components in a React app
+
+Load tokens once at your app root, then import from the package root:
+
+```tsx
+import '@mondave/core/tokens';
+import '@mondave/core/typography';
+
+import { Button } from '@mondave/core';
+
+export function Example() {
+  return (
+    <Button kind="Primary" size="Medium">
+      Save
+    </Button>
+  );
+}
+```
+
+Until the package is published to a registry, install or link from this repository (the package root is the `app/` directory). Longer install notes are in the project README.
+
+## How to browse this Storybook
+
+1. **Design System** — foundations and guidance (you are here).
+2. **Components** — interactive stories; open **Docs** on a component for when-to-use notes when available.
+3. **Toolbar** — **Color** (Light / Dark / Black) and **Spacing** preview without editing code.
+
+## What’s included
+
+- Shared **design tokens** (color modes + spacing) as CSS variables
+- **40** public React components styled with CSS Modules
+- **Icon** guide + thin Lucide wrapper for consistent sizing and colors
+- MDX usage docs for all components
+
+## Stack (short)
+
+React 19 · TypeScript · Vite · Storybook 10 · CSS Modules · Lucide icons ([Components → Icon](./?path=/docs/components-icon--docs)) · tokens synced from Figma
+
+## For contributors
+
+- Keep each component in its own folder: `.tsx`, `.module.css`, `.stories.tsx`, optional `.mdx`
+- Prefer CSS variables from the token file over hardcoded colors
+- Run `npm run build`, `npm run build-storybook`, and `npm run test-storybook` before sharing changes

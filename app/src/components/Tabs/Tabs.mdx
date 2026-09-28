@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+Tabs organize related content into switchable panels within the same view.
+
+## When to use
+
+- 2–6 peer sections at the same level
+- Settings categories or record detail views
+
+## When not to use
+
+- Sequential wizard steps — use **MultiStepIndicator**
+- Deep hierarchy — use navigation
+
+## Variants
+
+Normal, counter, and stretched layouts.
+
+## Accessibility
+
+- Tab list uses `role="tablist"`; panels use `role="tabpanel"`
+- Active tab should be focusable and announced
+
+## Examples
+
+<Canvas of={TabsStories.Normal} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

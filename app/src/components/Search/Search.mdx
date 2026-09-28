@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as SearchStories from './Search.stories';
+
+<Meta of={SearchStories} />
+
+# Search
+
+Search fields let users query and filter content with an optional clear control.
+
+## When to use
+
+- Filtering lists, tables, or directories
+- Global or scoped search in a toolbar
+
+## When not to use
+
+- Choosing from a fixed enum — use **Dropdown**
+- Multi-field advanced search — build a dedicated form
+
+## Accessibility
+
+- Use `type="search"` or `role="searchbox"` with a visible label
+- Clear button needs an accessible name
+
+## Examples
+
+<Canvas of={SearchStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

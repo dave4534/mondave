@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Color" />
+
+# Color
+
+Semantic color tokens map Figma roles to CSS variables (`tokens.css`). Switch the Storybook **Color** toolbar (Light / Dark / Black) to preview each mode — Light is `:root`, Dark uses `.dark`, Black uses `[data-theme="black"]`.
+
+## Semantic roles
+
+| Role | Variable | Usage |
+|------|----------|-------|
+| Primary | `--primary-color` | Primary actions, key emphasis |
+| Brand | `--brand-color` | Brand-specific accents |
+| Primary text | `--primary-text-color` | Body and headings |
+| Secondary text | `--secondary-text-color` | Supporting text, labels |
+| UI background | `--ui-background-color` | Page and canvas surfaces |
+| UI border | `--ui-border-color` | Dividers, input borders |
+| Positive | `--positive-color` | Success states |
+| Negative | `--negative-color` | Errors, destructive actions |
+| Warning | `--warning-color` | Caution states |
+| Disabled background | `--disabled-background-color` | Disabled controls |
+| Link | `--link-color` | Text links |
+
+## Swatches
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 'var(--space-16)', margin: 'var(--space-24) 0' }}>
+  {[
+    ['Primary', '--primary-color'],
+    ['Brand', '--brand-color'],
+    ['Text', '--primary-text-color'],
+    ['Secondary text', '--secondary-text-color'],
+    ['UI background', '--ui-background-color'],
+    ['UI border', '--ui-border-color'],
+    ['Positive', '--positive-color'],
+    ['Negative', '--negative-color'],
+    ['Warning', '--warning-color'],
+    ['Link', '--link-color'],
+  ].map(([label, variable]) => (
+    <div key={variable} style={{ border: '1px solid var(--ui-border-color)', borderRadius: 'var(--space-4)', overflow: 'hidden' }}>
+      <div style={{ background: `var(${variable})`, height: 56 }} />
+      <div className="type-text3-normal" style={{ padding: 'var(--space-8)' }}>
+        <div className="type-text3-medium">{label}</div>
+        <code>{variable}</code>
+      </div>
+    </div>
+  ))}
+</div>
+
+## Content palette
+
+Figma also exports content colors (berry, grass-green, royal, etc.) as `--content-color-*` for tags, status chips, and illustrations.
+
+## Guidelines
+
+- Prefer semantic tokens (`--primary-color`) in components over raw content palette values unless the design specifies a content color.
+- Check Light, Dark, and Black with the toolbar before shipping.
+- Pair link color with Text2 / Text1 **link** type styles when underlining.

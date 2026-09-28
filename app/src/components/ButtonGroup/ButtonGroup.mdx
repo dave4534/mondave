@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ButtonGroupStories from './ButtonGroup.stories';
+
+<Meta of={ButtonGroupStories} />
+
+# ButtonGroup
+
+Button groups present related actions as a connected segmented control.
+
+## When to use
+
+- Switching between 2–5 views or filters
+- Mutually exclusive options in a toolbar
+
+## When not to use
+
+- Unrelated actions — use separate **Button** components
+- Single on/off — use **Toggle**
+
+## Accessibility
+
+- Use `aria-pressed` or roving tabindex for the selected segment
+- Label the group when options are icon-only
+
+## Examples
+
+<Canvas of={ButtonGroupStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

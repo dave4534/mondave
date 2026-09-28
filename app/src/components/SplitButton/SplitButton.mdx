@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as SplitButtonStories from './SplitButton.stories';
+
+<Meta of={SplitButtonStories} />
+
+# SplitButton
+
+Split buttons combine a primary action with a menu of secondary alternatives.
+
+## When to use
+
+- Save with “Save as…” alternatives
+- Primary action plus related variants
+
+## When not to use
+
+- Unrelated actions in one control — use separate buttons
+- Single action — use **Button**
+
+## Accessibility
+
+- Both segments need discernible names
+- Menu trigger must declare expanded state
+
+## Examples
+
+<Canvas of={SplitButtonStories.Primary} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

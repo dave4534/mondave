@@ -1,0 +1,46 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as TextAreaStories from './TextArea.stories';
+
+<Meta of={TextAreaStories} />
+
+# TextArea
+
+Text areas let users enter multiple lines of text.
+
+## When to use
+
+- Descriptions, comments, or long-form notes
+- Multi-line validation with helper text
+
+## When not to use
+
+- Single-line values — use **TextField**
+- Rich text editing — use a dedicated editor
+
+## States
+
+| State | Use for |
+|-------|--------|
+| default | Normal input |
+| error | Validation failure |
+| success | Positive feedback |
+| disabled | Inactive |
+| readonly | Display-only |
+
+## Accessibility
+
+- Label associated via `htmlFor` / `id`
+- `aria-invalid` on error state
+
+## Examples
+
+<Canvas of={TextAreaStories.States} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

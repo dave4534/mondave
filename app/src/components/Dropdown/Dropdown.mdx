@@ -1,0 +1,53 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as DropdownStories from './Dropdown.stories';
+
+<Meta of={DropdownStories} />
+
+# Dropdown
+
+Dropdowns let users select one option from a list. The trigger shows the current selection or placeholder.
+
+## When to use
+
+- Choosing one value from 3–15 options
+- Space-constrained forms
+
+## When not to use
+
+- Typeahead / search within options — use **Combobox**
+- Navigation menus — use **Menu**
+
+## States
+
+| State | Use for |
+|-------|---------|
+| default | Normal selection |
+| error | Validation failure — pair with form-level error messaging |
+| disabled | Not interactive |
+| readonly | Display selected value only |
+
+**Do:** use `readonly` when the value must be visible but not changed; use `disabled` when the whole control is inactive.
+
+**Don't:** rely on placeholder alone — provide `aria-label` or a visible field label in the form layout.
+
+## Accessibility
+
+- Trigger is a `<button>` with `aria-haspopup="listbox"` and `aria-expanded`
+- Options use `role="option"` with `aria-selected`
+- Provide `aria-label` when no visible label exists
+
+## Examples
+
+<Canvas of={DropdownStories.AllStates} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Size (Small, Medium, Large) | Implemented |
+| States (default, error, disabled, readonly) | Implemented |
+| Keyboard navigation (full) | Partial |
+| Icon slot | Implemented |
+| All Figma variants | Partial |

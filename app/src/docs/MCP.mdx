@@ -1,0 +1,92 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/MCP" />
+
+# MCP Server
+
+Mondave ships a custom MCP server as **`@mondave/mcp`** so AI tools can retrieve component, docs, icon, token, and migration guidance directly from the design system source.
+
+## Overview
+
+The MCP server is designed to be comparable to Vibe-style MCP workflows:
+
+- Component metadata and discovery
+- Usage examples and starter boilerplate
+- Accessibility guidance per component
+- Docs search + focused retrieval
+- Icon search/list/detail
+- Token search/list/detail
+- Migration-analysis helper flow
+
+## Install
+
+### Cursor
+
+Add this to `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "mondave": {
+      "command": "npx",
+      "args": ["@mondave/mcp"]
+    }
+  }
+}
+```
+
+### VS Code
+
+Add this to `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "mondave": {
+      "command": "npx",
+      "args": ["@mondave/mcp"]
+    }
+  }
+}
+```
+
+## Available tools
+
+### Component tools
+
+- `list-mondave-components`
+- `get-mondave-component-metadata`
+- `get-mondave-component-examples`
+- `get-mondave-component-accessibility`
+
+### Docs tools
+
+- `search-mondave-docs`
+- `get-mondave-doc`
+
+### Icon tools
+
+- `list-mondave-icons`
+- `get-mondave-icon`
+
+### Token tools
+
+- `list-mondave-tokens`
+- `get-mondave-token`
+
+### Migration tool
+
+- `mondave-migration-analysis`
+
+## Guidance
+
+- Query components by exact export name first (for example `Button`, `Modal`, `IconButton`).
+- Use docs search before generating code to avoid stale assumptions.
+- Use token tools for CSS variable-safe styling instead of hardcoded values.
+- Run migration analysis before replacing imports in a large codebase.
+
+## Troubleshooting
+
+- If tools return empty data, ensure source docs and generated token files exist.
+- If icons look missing, confirm they are present in `Components/Icon` gallery.
+- If migration checks fail, verify `projectPath` points to a readable project root.

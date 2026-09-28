@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ChipsStories from './Chips.stories';
+
+<Meta of={ChipsStories} />
+
+# Chips
+
+Chips represent compact labels, filters, or selections.
+
+## When to use
+
+- Filter tags and removable selections
+- Compact status or category labels
+
+## When not to use
+
+- Primary actions — use **Button**
+- Long sentences — use body text
+
+## Types
+
+Primary, positive, negative, and warning color roles are available.
+
+## Accessibility
+
+- Removable chips need an accessible remove action
+- Disabled chips should not receive focus
+
+## Examples
+
+<Canvas of={ChipsStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

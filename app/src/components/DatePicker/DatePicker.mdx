@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} />
+
+# DatePicker
+
+Date pickers let users choose dates or ranges from a calendar surfaced via a text field.
+
+## When to use
+
+- Scheduling, deadlines, or reporting date ranges
+- When exact calendar dates matter
+
+## When not to use
+
+- Relative times (“in 2 hours”) — use plain text or presets
+- Simple year-only input — use **Dropdown**
+
+## Accessibility
+
+- Calendar grid needs labeled days and keyboard navigation
+- Pair with a visible label on the trigger field
+
+## Examples
+
+<Canvas of={DatePickerStories.Date} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

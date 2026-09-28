@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as LinkStories from './Link.stories';
+
+<Meta of={LinkStories} />
+
+# Link
+
+Links navigate users to another page, route, or external resource.
+
+## When to use
+
+- In-text navigation and external URLs
+- Secondary actions that leave the current flow
+
+## When not to use
+
+- Submitting forms or firing commands — use **Button**
+- Toggling settings — use **Toggle**
+
+## States
+
+Default, hover, disabled, and inverted treatments are available.
+
+## Accessibility
+
+- Link text must describe the destination
+- External links should indicate they open a new context when applicable
+
+## Examples
+
+<Canvas of={LinkStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

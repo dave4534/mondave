@@ -1,0 +1,45 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+Avatars represent users or entities with image, initials, letter, or icon content.
+
+## When to use
+
+- User identity in lists, comments, or headers
+- Entity placeholders before an image loads
+
+## When not to use
+
+- Decorative icons — use **Icon** slots directly
+- Large profile hero imagery — use a dedicated image component
+
+## Types
+
+| Type | Use for |
+|------|--------|
+| image | Photo or uploaded avatar |
+| initials | Two-letter fallback |
+| letter | Single-character fallback |
+| icon | Generic entity |
+
+## Accessibility
+
+- Provide meaningful `alt` text for images
+- Decorative avatars should be `aria-hidden` when adjacent text names the person
+
+## Examples
+
+<Canvas of={AvatarStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

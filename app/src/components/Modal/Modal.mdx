@@ -1,0 +1,54 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+Modals display content that requires user attention or action. They interrupt the current flow until dismissed or completed.
+
+## When to use
+
+- Confirming destructive actions
+- Short forms or focused tasks
+- Critical information that blocks the page
+
+## When not to use
+
+- Non-blocking hints — use **Tipseen** or **Tooltip**
+- Persistent notifications — use **Toast**
+
+## Behavior
+
+- Focus moves to the dialog when opened
+- **Escape** closes the modal when `onClose` is provided
+- Backdrop click closes when `onClose` is set
+- Footer actions support `loading` and `disabled` on `primaryAction` / `secondaryAction`
+
+**Do:** set `primaryAction.loading` while saving; disable Cancel with `secondaryAction.disabled` to prevent dismissal mid-request.
+
+**Don't:** leave both footer buttons enabled during a destructive async action.
+
+## Accessibility
+
+- `role="dialog"` with `aria-modal="true"`
+- Title and subtitle linked via `aria-labelledby` / `aria-describedby`
+- Close control has `aria-label="Close"`
+- Loading primary action exposes `aria-busy` via **Button**
+
+## Examples
+
+<Canvas of={ModalStories.Saving} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Size (Small, Medium, Large) | Implemented |
+| Scroll body | Implemented |
+| Header, footer actions | Implemented |
+| Footer action loading / disabled | Implemented |
+| Focus trap (full) | Deferred |
+| All Figma variants | Partial |

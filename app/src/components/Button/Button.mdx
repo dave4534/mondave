@@ -1,0 +1,67 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Buttons allow users to take actions with a single click. Use only one primary button per view; remaining calls to action should use lower emphasis kinds.
+
+## When to use
+
+- Submitting forms or confirming a dialog
+- Primary navigation actions within a section
+- Triggering immediate actions (save, create, apply)
+
+## When not to use
+
+- Navigating to another page — use **Link** instead
+- Toggling a setting on/off — use **Toggle**
+- Multiple equally important actions — use **ButtonGroup** or tertiary buttons
+
+## Variants
+
+| Kind | Use for |
+|------|---------|
+| Primary | Main action on the page or in a dialog |
+| Secondary | Secondary actions alongside primary |
+| Tertiary | Low-emphasis actions |
+| Brand | Brand-specific promotional actions |
+
+## States
+
+| State | Use for |
+|-------|---------|
+| default | Ready to interact |
+| disabled | Action unavailable — explain why when possible |
+| loading | Async action in progress — keeps label visible, blocks repeat clicks |
+
+**Do:** set `loading` while a save/submit request is in flight; change the label if helpful (`Save` → `Saving…`).
+
+**Don't:** use `loading` for page-level fetches — use **Loader** or skeleton content instead.
+
+## Accessibility
+
+- Native `<button>` with visible `:focus-visible` ring
+- Icon-only buttons must include `aria-label`
+- `loading` sets `aria-busy` and disables the control until complete
+- Use `disabled` for inactive actions; explain why when possible
+
+## Examples
+
+<Canvas of={ButtonStories.Loading} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Kind (Primary, Secondary, Tertiary, Brand) | Implemented |
+| Size (XS, Small, Medium, Large) | Implemented |
+| Icon (Default, Left, Right) | Implemented |
+| Disabled | Implemented |
+| Loading | Implemented |
+| Color variants | Deferred |
+| Active / pressed states | Deferred |
+| Full 1,164-variant matrix | Deferred |

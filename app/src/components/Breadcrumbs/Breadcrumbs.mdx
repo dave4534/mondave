@@ -1,0 +1,41 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as BreadcrumbsStories from './Breadcrumbs.stories';
+
+<Meta of={BreadcrumbsStories} />
+
+# Breadcrumbs
+
+Breadcrumbs show the current location within a hierarchy and allow navigation upward.
+
+## When to use
+
+- Deep navigation hierarchies (workspace → folder → item)
+- Desktop layouts with horizontal space
+
+## When not to use
+
+- Flat apps with one level of nav
+- Mobile primary navigation — use **Menu**
+
+## Parts
+
+- **BreadcrumbsBar** — full trail
+- **BreadcrumbItem** — individual segment (regular vs current)
+
+## Accessibility
+
+- Wrap the trail in `nav` with `aria-label="Breadcrumb"`
+- Mark the current page item and omit its link
+
+## Examples
+
+<Canvas of={BreadcrumbsStories.Bar} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

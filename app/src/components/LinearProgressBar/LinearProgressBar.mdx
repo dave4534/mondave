@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as LinearProgressBarStories from './LinearProgressBar.stories';
+
+<Meta of={LinearProgressBarStories} />
+
+# LinearProgressBar
+
+Linear progress bars show completion toward a goal with an optional percentage label.
+
+## When to use
+
+- File uploads or multi-step task progress
+- Determinate completion (0–100%)
+
+## When not to use
+
+- Indeterminate waits with unknown duration — use **Loader**
+- Single-step button feedback — use **Button** loading state
+
+## Types
+
+Primary, positive, negative, and multi-segment variants.
+
+## Accessibility
+
+- Use `role="progressbar"` with `aria-valuenow` when determinate
+- Provide a text alternative for the percentage
+
+## Examples
+
+<Canvas of={LinearProgressBarStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

@@ -1,0 +1,43 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as AttentionBoxStories from './AttentionBox.stories';
+
+<Meta of={AttentionBoxStories} />
+
+# AttentionBox
+
+Attention boxes highlight contextual information with optional link or button actions.
+
+## When to use
+
+- Tips inside a form or panel
+- Secondary guidance that should not block the page
+
+## When not to use
+
+- Critical blocking messages — use **Modal** or **AlertBanner**
+- Per-field validation — use input helper text
+
+## Variants
+
+| Variant | Use for |
+|---------|--------|
+| default | Standard callout |
+| compact | Tighter layouts |
+
+## Accessibility
+
+- Keep copy concise; link actions should describe the destination
+- Ensure sufficient contrast for type variants
+
+## Examples
+
+<Canvas of={AttentionBoxStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

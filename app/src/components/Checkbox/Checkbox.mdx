@@ -1,0 +1,53 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+Checkboxes let users select one or more options from a set. Each checkbox is independent unless grouped semantically.
+
+## When to use
+
+- Multiple selections from a list
+- Opt-in / opt-out settings
+- Indeterminate parent in a tree (partial selection)
+
+## When not to use
+
+- Single choice from a list — use **RadioButton**
+- On/off settings — use **Toggle**
+
+## States
+
+| State | Meaning |
+|-------|---------|
+| regular | Unchecked, enabled |
+| selected | Checked |
+| disabled | Not interactive |
+| indeterminate | Partial selection (`aria-checked="mixed"`) |
+
+**Do:** use `indeterminate` on a parent when some (not all) children are selected.
+
+**Don't:** use a disabled checkbox alone to show read-only status — pair with clear copy or use `readonly` patterns on the surrounding field.
+
+## Accessibility
+
+- Visible label associated via `htmlFor` / `id` (auto-generated when omitted)
+- Without visible label, provide `aria-label`
+- Use `aria-checked="mixed"` for indeterminate
+
+## Examples
+
+<Canvas of={CheckboxStories.AllStates} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| State (regular, selected, disabled, indeterminate) | Implemented |
+| Label on/off | Implemented |
+| Hover / focus visual states | Partial |
+| All Figma variants | Partial |

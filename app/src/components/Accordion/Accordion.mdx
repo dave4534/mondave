@@ -1,0 +1,41 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as AccordionStories from './Accordion.stories';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+Accordions reveal and hide sections of related content in a vertical stack.
+
+## When to use
+
+- FAQ or settings grouped by topic
+- Long pages where only one section needs focus at a time
+
+## When not to use
+
+- Short content that fits on screen — keep it visible
+- Primary navigation — use **Tabs** or **Menu**
+
+## Behavior
+
+- Expand/collapse per item
+- Use for scannable grouped content, not sequential steps — see **Steps** or **MultiStepIndicator**
+
+## Accessibility
+
+- Header controls should be keyboard operable
+- Expose expanded/collapsed state to assistive tech
+
+## Examples
+
+<Canvas of={AccordionStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

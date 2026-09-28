@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as DividerStories from './Divider.stories';
+
+<Meta of={DividerStories} />
+
+# Divider
+
+Dividers separate content into distinct sections.
+
+## When to use
+
+- Visual separation between list groups or form sections
+- Toolbar or menu item grouping
+
+## When not to use
+
+- Spacing alone — use layout tokens
+- Decorative lines without semantic separation
+
+## Orientation
+
+Horizontal and vertical dividers are supported.
+
+## Accessibility
+
+- Use `role="separator"` when the divider conveys structure
+- Prefer spacing when separation is purely visual
+
+## Examples
+
+<Canvas of={DividerStories.BothOrientations} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

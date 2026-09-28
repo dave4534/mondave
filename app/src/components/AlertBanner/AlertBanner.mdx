@@ -1,0 +1,47 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as AlertBannerStories from './AlertBanner.stories';
+
+<Meta of={AlertBannerStories} />
+
+# AlertBanner
+
+Alert banners communicate important page-level messages with optional actions.
+
+## When to use
+
+- System status or policy updates at the top of a view
+- Success or error summaries that need attention
+
+## When not to use
+
+- Transient feedback — use **Toast**
+- Inline field errors — use **TextField** validation
+
+## Types
+
+| Type | Use for |
+|------|--------|
+| primary | Neutral information |
+| positive | Success |
+| negative | Errors or failures |
+| warning | Caution |
+| dark | High-contrast emphasis |
+
+## Accessibility
+
+- Include a clear message in the banner body
+- Dismiss control needs `aria-label="Close"`
+- Do not rely on color alone for meaning
+
+## Examples
+
+<Canvas of={AlertBannerStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

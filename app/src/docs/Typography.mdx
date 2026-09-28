@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Typography" />
+
+# Typography
+
+Mondave type comes from Figma **Text Styles** (not color/spacing variables). CSS lives in `@mondave/core` typography styles — family tokens, size tokens, and `.type-*` utility classes.
+
+## Families
+
+| Role | Family | CSS variable | Used for |
+|------|--------|--------------|----------|
+| Headings | Poppins | `--font-family-heading` | H1, H2, H3 |
+| Body / UI | Figtree | `--font-family-body` | Text1, Text2, Text3, links |
+
+## Scale
+
+| Style | Size | Line height | Font |
+|-------|------|-------------|------|
+| H1 | `--font-size-h1` (32px) | 40px | Poppins |
+| H2 | `--font-size-h2` (24px) | 30px | Poppins |
+| H3 | `--font-size-h3` (18px) | 24px | Poppins |
+| Text1 | `--font-size-text1` (16px) | 22px | Figtree |
+| Text2 | `--font-size-text2` (14px) | 20px | Figtree |
+| Text3 | `--font-size-text3` (12px) | 16px | Figtree |
+
+Weights: Light `300` · Regular `400` · Medium `500` · SemiBold `600` · Bold `700`
+
+## When to use
+
+- **H1** — Main page titles only
+- **H2** — Secondary titles / feature headings
+- **H3** — Subtitles, group names, admin subheads
+- **Text1** — Default body and primary UI copy
+- **Text2** — Secondary body, denser UI (common on controls)
+- **Text3** — Captions, meta, compact labels
+- **\*-link** styles — Underlined links; Text2 link is preferred on colored surfaces per Figma
+
+## Live specimens
+
+<div style={{ display: 'grid', gap: 'var(--space-24)', marginTop: 'var(--space-24)' }}>
+  <div>
+    <p className="type-text3-medium" style={{ color: 'var(--secondary-text-color)', margin: '0 0 var(--space-8)' }}>Headings · Poppins</p>
+    <p className="type-h1-bold" style={{ margin: '0 0 var(--space-8)' }}>H1 Bold — Mondave</p>
+    <p className="type-h1-medium" style={{ margin: '0 0 var(--space-8)' }}>H1 Medium — Mondave</p>
+    <p className="type-h1-normal" style={{ margin: '0 0 var(--space-8)' }}>H1 Normal — Mondave</p>
+    <p className="type-h1-light" style={{ margin: '0 0 var(--space-16)' }}>H1 Light — Mondave</p>
+    <p className="type-h2-bold" style={{ margin: '0 0 var(--space-8)' }}>H2 Bold — Secondary title</p>
+    <p className="type-h2-normal" style={{ margin: '0 0 var(--space-16)' }}>H2 Normal — Secondary title</p>
+    <p className="type-h3-bold" style={{ margin: '0 0 var(--space-8)' }}>H3 Bold — Subtitle</p>
+    <p className="type-h3-normal" style={{ margin: 0 }}>H3 Normal — Subtitle</p>
+  </div>
+  <div>
+    <p className="type-text3-medium" style={{ color: 'var(--secondary-text-color)', margin: '0 0 var(--space-8)' }}>Body · Figtree</p>
+    <p className="type-text1-bold" style={{ margin: '0 0 var(--space-8)' }}>Text1 Bold — Primary body</p>
+    <p className="type-text1-normal" style={{ margin: '0 0 var(--space-8)' }}>Text1 Normal — Primary body</p>
+    <p className="type-text1-normal-link" style={{ margin: '0 0 var(--space-16)', color: 'var(--link-color)' }}>Text1 Normal-link</p>
+    <p className="type-text2-medium" style={{ margin: '0 0 var(--space-8)' }}>Text2 Medium — Secondary body</p>
+    <p className="type-text2-normal" style={{ margin: '0 0 var(--space-8)' }}>Text2 Normal — Secondary body</p>
+    <p className="type-text2-normal-link" style={{ margin: '0 0 var(--space-16)', color: 'var(--link-color)' }}>Text2 Normal-link</p>
+    <p className="type-text3-medium" style={{ margin: '0 0 var(--space-8)' }}>Text3 Medium — Caption</p>
+    <p className="type-text3-normal" style={{ margin: 0 }}>Text3 Normal — Caption</p>
+  </div>
+</div>
+
+## In CSS
+
+```css
+.page-title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Or use a utility class */
+.page-title {
+  composes: type-h1-bold from global; /* or apply className="type-h1-bold" */
+}
+```
+
+Import once alongside tokens: `@mondave/core/typography` (or the relative path under `src/styles/generated/typography.css`).

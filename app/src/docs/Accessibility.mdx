@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Accessibility" />
+
+# Accessibility
+
+Storybook runs automated accessibility checks (`a11y.test: 'error'`) on every story. Fix violations before merging component changes.
+
+## Focus
+
+- All interactive elements must have a visible `:focus-visible` outline.
+- Buttons use `outline: 2px solid var(--primary-color)` — do not remove focus styles.
+- Modals move focus to the dialog on open and close on **Escape**.
+
+## Labels
+
+- Form fields associate `<label htmlFor>` with input `id` (see TextField).
+- Checkboxes without visible labels require `aria-label`.
+- Icon-only buttons require `aria-label` describing the action.
+- Standalone meaningful icons use `label` on **Icon** or an accessible name on the parent control.
+
+## Icons
+
+Mondave uses [Lucide React](https://lucide.dev). See **Components → Icon** for sizes, semantic colors, and `iconElement` slot patterns on Button, IconButton, Link, and other components.
+
+## Disabled states
+
+- Native `disabled` on buttons and inputs where appropriate.
+- Disabled links render as `<span role="link" aria-disabled="true">` — not a focusable `<a href="#">`.
+- When an action is disabled, provide context via helper text or `aria-describedby`.
+
+## Color contrast
+
+Test components in **Light**, **Dark**, and **Black** modes using the Color toolbar. Semantic tokens are designed for each mode — avoid hardcoded colors.
+
+## Storybook checks
+
+1. Open the **Accessibility** panel on each pilot component story.
+2. Run `npm run test-storybook` for interaction tests that include a11y assertions.
+3. Fix all errors before marking a component as complete.

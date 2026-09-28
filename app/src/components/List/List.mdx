@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ListStories from './List.stories';
+
+<Meta of={ListStories} />
+
+# List
+
+Lists display vertical rows with optional icons, avatars, badges, and selection.
+
+## When to use
+
+- Selectable rows in a panel or picker
+- Settings or item pickers with rich row content
+
+## When not to use
+
+- Semantic document outlines — use proper heading structure
+- Data tables with sortable columns — use a table pattern
+
+## Accessibility
+
+- Selectable rows need clear selected state
+- Row actions should be keyboard reachable
+
+## Examples
+
+<Canvas of={ListStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

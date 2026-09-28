@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as TipseenStories from './Tipseen.stories';
+
+<Meta of={TipseenStories} />
+
+# Tipseen
+
+Tipseen provides guided onboarding callouts with optional media and actions.
+
+## When to use
+
+- First-run product tours
+- Feature discovery anchored to UI elements
+
+## When not to use
+
+- Critical errors — use **Modal** or **AlertBanner**
+- Persistent help — use documentation links
+
+## Accessibility
+
+- Allow users to dismiss and return later
+- Trap focus only when the tip blocks required action
+
+## Examples
+
+<Canvas of={TipseenStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

@@ -1,0 +1,54 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as TextFieldStories from './TextField.stories';
+
+<Meta of={TextFieldStories} />
+
+# TextField
+
+Text fields let users enter a single line of text. Always pair with a visible label unless an accessible name is provided another way.
+
+## When to use
+
+- Short text input (name, email, search query)
+- Form fields with validation feedback
+
+## When not to use
+
+- Multi-line content — use **TextArea**
+- Selecting from predefined options — use **Dropdown** or **Combobox**
+
+## States
+
+| State | Use for |
+|-------|---------|
+| default | Normal input |
+| error | Validation failure — pair with error helper text |
+| success | Positive validation feedback |
+| disabled | Non-editable, inactive |
+| readonly | Display-only value |
+
+**Do:** switch to `error` only after validation runs; keep helper text specific (`Email is required`).
+
+**Don't:** use `disabled` for read-only data — use `readonly` so the value stays readable and copyable.
+
+## Accessibility
+
+- Label is associated via `htmlFor` / `id`
+- Helper text linked with `aria-describedby`
+- `aria-invalid` set on error state
+
+## Examples
+
+<Canvas of={TextFieldStories.States} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Size (Small, Medium, Large) | Implemented |
+| Validation states (error, success, disabled, readonly) | Implemented |
+| Label, helper, character limit | Implemented |
+| Icon slots | Implemented |
+| All Figma size/state combinations | Partial |

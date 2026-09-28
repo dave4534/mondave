@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as SliderStories from './Slider.stories';
+
+<Meta of={SliderStories} />
+
+# Slider
+
+Sliders let users pick a value or range along a track.
+
+## When to use
+
+- Numeric settings where approximate values are fine (volume, opacity)
+- Range filters with visual feedback
+
+## When not to use
+
+- Exact numeric entry — pair with **TextField** or use stepper
+- Binary choices — use **Toggle**
+
+## Accessibility
+
+- Thumbs must be keyboard operable
+- Expose `aria-valuemin`, `aria-valuemax`, and `aria-valuenow`
+
+## Examples
+
+<Canvas of={SliderStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

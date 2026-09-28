@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as AvatarGroupStories from './AvatarGroup.stories';
+
+<Meta of={AvatarGroupStories} />
+
+# AvatarGroup
+
+Avatar groups show overlapping avatars with an overflow counter for additional members.
+
+## When to use
+
+- Collaborators on a board or document
+- Team preview in compact headers
+
+## When not to use
+
+- Single user identity — use **Avatar**
+- Long member lists — link to a full roster view
+
+## Accessibility
+
+- Expose total count in visible text or `aria-label` on the group
+- Overflow "+N" should describe how many more people
+
+## Examples
+
+<Canvas of={AvatarGroupStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

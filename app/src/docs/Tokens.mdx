@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Tokens" />
+
+# Design tokens
+
+Tokens are exported from Figma as W3C DTCG JSON and generated CSS custom properties. Color and spacing come from **Figma Variables**; typography comes from **Figma Text Styles**.
+
+## File locations
+
+| File | Purpose |
+|------|---------|
+| `src/styles/tokens/tokens.json` | Canonical DTCG source (variables) |
+| `src/styles/generated/tokens.css` | Color + spacing CSS custom properties |
+| `src/styles/generated/typography.css` | Type scale + `.type-*` utility classes |
+| `tokens.config.json` | Round-trip sync config for variables |
+
+## Collections
+
+- **Color Tokens** — Light (`:root`), Dark (`.dark`), Black (`[data-theme="black"]`)
+- **Spacing** — `mode-1` (`[data-theme="mode-1"]`)
+- **Typography** — Poppins headings + Figtree body (see Typography docs)
+
+## Sync commands
+
+Export variables with `figma_export_tokens`. Typography text styles are maintained separately in `typography.css` (Desktop Bridge / text style inventory).
+
+## Verification
+
+Open **Design System → Token Smoke Test** for spacing, **Typography** for type specimens, and **Color** for semantic swatches.
+
+See also: [Color](./?path=/docs/design-system-color--docs), [Spacing](./?path=/docs/design-system-spacing--docs), [Typography](./?path=/docs/design-system-typography--docs).

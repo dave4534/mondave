@@ -1,0 +1,36 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as StickyStories from './Sticky.stories';
+
+<Meta of={StickyStories} />
+
+# Sticky
+
+Sticky indicates pinned or sticky items with an on/off visual state.
+
+## When to use
+
+- Pinning rows, notes, or columns
+- Showing that an item stays fixed while scrolling
+
+## When not to use
+
+- Generic favorites — use icon + label with clear copy
+- Primary navigation pinning
+
+## Accessibility
+
+- Toggle must communicate pinned state in text or `aria-pressed`
+- Do not rely on icon color alone
+
+## Examples
+
+<Canvas of={StickyStories.StickyOn} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

@@ -1,0 +1,45 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as EmptyStateStories from './EmptyState.stories';
+
+<Meta of={EmptyStateStories} />
+
+# EmptyState
+
+Empty states explain what to do when a view has no content yet.
+
+## When to use
+
+- First-time use or cleared lists
+- No search results with a suggested next step
+
+## When not to use
+
+- Loading — use **Skeleton** or **Loader**
+- Errors — use **AlertBanner** or inline validation
+
+## Variants
+
+| Variant | Use for |
+|---------|--------|
+| default | Standard panel |
+| compact | Tight layouts |
+| inline | Inside tables or rows |
+| main | Hero-style empty views |
+
+## Accessibility
+
+- Title should state the situation clearly
+- Primary action needs descriptive label text
+
+## Examples
+
+<Canvas of={EmptyStateStories.Default} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

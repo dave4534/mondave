@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+Toasts show brief, non-blocking feedback after an action.
+
+## When to use
+
+- Confirming save, copy, or background task completion
+- Transient status that does not need a response
+
+## When not to use
+
+- Errors that require a decision — use **Modal**
+- Persistent page alerts — use **AlertBanner**
+
+## Types
+
+Primary, negative, positive, and warning. Supports loading state without actions.
+
+## Accessibility
+
+- Use `role="status"` or live region for announcements
+- Provide a dismiss control when the toast stays on screen
+
+## Examples
+
+<Canvas of={ToastStories.AllTypes} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

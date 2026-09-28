@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as LabelStories from './Label.stories';
+
+<Meta of={LabelStories} />
+
+# Label
+
+Labels categorize or highlight short pieces of text.
+
+## When to use
+
+- Status tags (Beta, New)
+- Category markers in tables or cards
+
+## When not to use
+
+- Interactive filters — use **Chips**
+- Long descriptions — use body text
+
+## Styles
+
+Fill and line treatments with semantic colors and multiple sizes.
+
+## Accessibility
+
+- Keep label text short and meaningful
+- Do not use labels as the only error indicator
+
+## Examples
+
+<Canvas of={LabelStories.AllColorsFill} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |

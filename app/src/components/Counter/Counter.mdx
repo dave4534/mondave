@@ -1,0 +1,40 @@
+import { Meta, Canvas, Stories } from '@storybook/addon-docs/blocks';
+import * as CounterStories from './Counter.stories';
+
+<Meta of={CounterStories} />
+
+# Counter
+
+Counters display numeric values such as notification counts.
+
+## When to use
+
+- Tab counts, filter totals, or quantity badges
+- Numeric emphasis beside labels
+
+## When not to use
+
+- Arbitrary decoration without meaning
+- Progress — use **LinearProgressBar**
+
+## Styles
+
+Fill and line variants with semantic color roles.
+
+## Accessibility
+
+- Expose the number in context (“Messages, 3 unread”)
+- Do not rely on color alone
+
+## Examples
+
+<Canvas of={CounterStories.Primary} />
+
+<Stories />
+
+## Figma parity
+
+| Axis | Status |
+|------|--------|
+| Core behavior | Implemented |
+| All Figma variants | Partial |
